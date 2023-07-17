@@ -11,7 +11,7 @@ services:
     volumes:
       - ./ddl-init.sql:/docker-entrypoint-initdb.d/init.sql  # создаём таблицы БД
     healthcheck:
-      test: ["CMD", "pg_isready", "-U", "postgres"]
+      test: ["CMD", "pg_isready", "-U", "username", "library_db"]
       interval: 5s
       retries: 5
     restart: always
