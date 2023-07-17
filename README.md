@@ -15,9 +15,9 @@
 - Книга считается прочитанной, если она была взята и сдана.
 ## Логика решения:
 1. Сформирован срипт для создания БД:
-- Скрипт DDL по созданию БД находиться по ссылке: (<code>[./init.sql]()</code>);
-2. Создан файл docker-compose для автоматического разворачивания БД в контейнере. (<code>[./docker-compose.yml]()</code>);
+- Скрипт DDL по созданию БД находиться по ссылке: (<code>[./init.sql](https://github.com/La-Haine-0/DE-DB-2.3-DML-SQL/blob/new-branch/ddl-init.sql)</code>);
+2. Создан файл docker-compose для автоматического разворачивания БД в контейнере. (<code>[./docker-compose.yml](https://github.com/La-Haine-0/DE-DB-2.3-DML-SQL/blob/new-branch/docker-compose.yml)</code>);
 3. Сформирован срипт для наполнения БД:
-- Скрипт DML для БД находиться по ссылке: (<code>[./load-data.sql]()</code>);
+- Скрипт DML для БД находиться по ссылке: (<code>[./load-data.sql](https://github.com/La-Haine-0/DE-DB-2.3-DML-SQL/blob/new-branch/data.sql)</code>);
 4. Сформирован срипт для запросов в БД:
-- Скрипт DML c различными запросами к БД представлен в файле по пути: (<code>[./quest.sql]()</code>)
+- Скрипт DML c различными запросами к БД представлен в файле по пути: (<code>[./quest.sql](https://github.com/La-Haine-0/DE-DB-2.3-DML-SQL/blob/new-branch/quest.sql)</code>)
