@@ -76,4 +76,3 @@ LEFT JOIN (
 LEFT JOIN books AS b USING(book_id)
 GROUP BY r.reader_fio
 ORDER BY 2 DESC NULLS LAST;
-
