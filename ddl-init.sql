@@ -44,9 +44,14 @@ CREATE TABLE IF NOT EXISTS public.copies_of_books (
 );
 CREATE TABLE IF NOT EXISTS public.lending_of_books (
     lending_of_book_id serial PRIMARY KEY,
-    lending_date date NOT NULL DEFAULT CURRENT_DATE,
-    deadline_time date NOT NULL DEFAULT CURRENT_DATE,
+    lending_date DATE NOT NULL DEFAULT CURRENT_DATE,
+    deadline_time DATE NOT NULL DEFAULT (CURRENT_DATE + INTERVAL '14 days'), -- Предполагаемый срок возврата - 14 дней
     return_date DATE,
     reader_id BIGINT REFERENCES public.readers (reader_id) ON DELETE CASCADE,
     book_id BIGINT REFERENCES public.books (book_id) ON DELETE SET NULL
+);
+CREATE TABLE IF NOT EXISTS public.return_of_books (
+    return_id serial PRIMARY KEY,
+    lending_id BIGINT REFERENCES public.lending_of_books (lending_of_book_id) ON DELETE CASCADE,
+    return_date DATE NOT NULL DEFAULT CURRENT_DATE
 );

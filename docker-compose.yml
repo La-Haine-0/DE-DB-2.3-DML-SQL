@@ -11,6 +11,7 @@ services:
     volumes:
       - ./ddl-init.sql:/docker-entrypoint-initdb.d/init.sql  # создаём таблицы БД
       - ./load-data.sql:/docker-entrypoint-initdb.d/load_data.sql # загружаем данные в таблицы
+      - ./quest.sql:/docker-entrypoint-initdb.d/queries.sql # выполняем запросы к БД
     healthcheck:
       test: ["CMD", "pg_isready", "-U", "username", "library_db"]
       interval: 5s
